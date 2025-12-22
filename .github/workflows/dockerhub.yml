@@ -22,8 +22,8 @@ jobs:
       run: |
         docker build \
           -t ${{ secrets.DOCKER_USERNAME }}/cicd-pipeline-viz:latest \
-          -f frontend/Dockerfile \
-          frontend
+          -f application/Dockerfile \
+          application
     
 
     - name: Push image
