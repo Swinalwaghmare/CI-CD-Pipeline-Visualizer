@@ -20,7 +20,11 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/cicd-pipeline-viz:latest .
+        docker build \
+          -t ${{ secrets.DOCKER_USERNAME }}/cicd-pipeline-viz:latest \
+          -f frontend/Dockerfile \
+          frontend
+    
 
     - name: Push image
       run: |
