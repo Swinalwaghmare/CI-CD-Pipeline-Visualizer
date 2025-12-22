@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Custom dark theme styles */
+body {
+  background: linear-gradient(135deg, #111827 0%, #1e293b 50%, #111827 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
