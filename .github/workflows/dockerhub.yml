@@ -1,9 +1,12 @@
-name: Build & Push Docker Image (Docker Hub)
+name: Manual Docker Build & Push (Docker Hub)
 
 on:
-  push:
-    branches:
-    - main
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: "Docker image tag (e.g. v1.0.0, commit-sha, latest)"
+        required: true
+        default: "latest"
 
 jobs:
   docker:
@@ -21,11 +24,11 @@ jobs:
     - name: Build Docker image
       run: |
         docker build \
-          -t ${{ secrets.DOCKER_USERNAME }}/cicd-pipeline-viz:latest \
+          -t ${{ secrets.DOCKER_USERNAME }}/cicd-pipeline-viz:${{ github.event.inputs.image_tag }} \
           -f application/Dockerfile \
           application
-    
 
-    - name: Push image
+    - name: Push Docker image
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/cicd-pipeline-viz:latest
+        docker push \
+          ${{ secrets.DOCKER_USERNAME }}/cicd-pipeline-viz:${{ github.event.inputs.image_tag }}
