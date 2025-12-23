@@ -4,8 +4,8 @@
 
 // Canvas dimensions
 export const CANVAS_CONFIG = {
-    width: 1400,
-    height: 600
+    width: 1350,
+    height: 700
 };
 
 // Image URLs for icons
@@ -26,72 +26,62 @@ export const IMAGE_URLS = {
 export const NODES = {
     // CI Pipeline (Top Row - Left to Right)
     sourceBox: { 
-        x: 50, y: 50, width: 180, height: 120, 
+        x: 70, y: 100, width: 180, height: 120, 
         label: 'Source Code', type: 'box', color:'#24292e',
         image: 'folder'
     },
     github: { 
-        x: 280, y: 50, width: 150, height: 120, 
+        x: 350, y: 100, width: 150, height: 120, 
         label: 'GitHub', type: 'box', color: '#24292e',
         image: 'github'
     },
     action: { 
-        x: 480, y: 50, width: 150, height: 120, 
+        x: 600, y: 100, width: 150, height: 120, 
         label: 'GitHub Action', type: 'box', color: '#24292e',
         image: 'githubActions',
         subtext: 'Build & Push'
     },
     dockerImage: { 
-        x: 680, y: 50, width: 150, height: 120, 
+        x: 850, y: 100, width: 150, height: 120, 
         label: 'Docker Image', type: 'box', color: '#24292e',
         image: 'docker'
     },
     registry: { 
-        x: 880, y: 50, width: 180, height: 120, 
+        x: 1100, y: 100, width: 180, height: 120, 
         label: 'ECR / Docker Hub', type: 'box', color: '#24292e',
         images: ['aws', 'dockerHub']
     },
     
     // CD Pipeline (Bottom Row - Left to Right)
     webhook: { 
-        x: 50, y: 430, width: 180, height: 120, 
+        x: 70, y: 480, width: 180, height: 120, 
         label: 'Webhook Event', type: 'box', color: '#1e3a8a',
         image: 'webhook',
         subtext: 'Detect Change'
     },
     githubActions2: { 
-        x: 280, y: 430, width: 150, height: 120, 
+        x: 350, y: 480, width: 150, height: 120, 
         label: 'GitHub Actions', type: 'box', color: '#24292e',
         image: 'githubActions',
         subtext: 'Update Helm'
     },
     gitRepo: { 
-        x: 480, y: 430, width: 150, height: 120, 
+        x: 600, y: 480, width: 150, height: 120, 
         label: 'Git Repository', type: 'box', color: '#24292e',
         image: 'git',
-        subtext: 'Helm Charts'
+        subtext: 'UpdateValue.yml'
     },
     argocd: { 
-        x: 680, y: 430, width: 150, height: 120, 
+        x: 850, y: 480, width: 150, height: 120, 
         label: 'ArgoCD', type: 'box', color: '#e85d2d',
         image: 'argocd',
         subtext: 'Sync & Deploy'
     },
     kubernetes: { 
-        x: 880, y: 430, width: 180, height: 120, 
+        x: 1100, y: 480, width: 180, height: 120, 
         label: 'Kubernetes', type: 'box', color: '#326ce5',
         image: 'kubernetes',
         subtext: 'Update Pods'
-    },
-    
-    // Stage labels
-    ciStage: {
-        x: 50, y: 15, width: 1010, height: 25,
-        label: 'CI Pipeline - Build & Push', type: 'stage', color: '#1e293b'
-    },
-    cdStage: {
-        x: 50, y: 395, width: 1010, height: 25,
-        label: 'CD Pipeline - GitOps Deployment', type: 'stage', color: '#1e293b'
     }
 };
 
@@ -115,11 +105,11 @@ export const CONNECTIONS = [
 
 // Particle configuration
 export const PARTICLE_CONFIG = {
-    minSpeed: 0.005,
-    maxSpeed: 0.008,
+    minSpeed: 0.002,
+    maxSpeed: 0.005,
     minSize: 4,
     maxSize: 7,
-    minGlow: 15,
-    maxGlow: 25,
-    particlesPerConnection: 5
+    minGlow: 3,
+    maxGlow: 5,
+    particlesPerConnection: 2
 };
