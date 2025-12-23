@@ -17,13 +17,13 @@ jobs:
     - name: Update Helm values
       run: |
         TAG="${{ github.event.client_payload.tag }}"
-        sed -i "s/tag:.*/tag: ${TAG}/" helm/cicd-pipeline-viz/values.yaml
+        sed -i "s/tag:.*/tag: ${TAG}/" helm/cicd-pipeline/values.yaml
 
     - name: Commit and push
       run: |
         git config user.name "gitops-bot"
         git config user.email "gitops-bot@github.com"
-        git add helm/cicd-pipeline-viz/values.yaml
+        git add helm/cicd-pipeline/values.yaml
         git commit -m "chore: update image tag to ${TAG}"
         git push
 
