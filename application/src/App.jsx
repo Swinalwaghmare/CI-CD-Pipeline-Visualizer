@@ -5,7 +5,7 @@ function App() {
     <div className="min-h-screen flex flex-col items-center justify-center p-8">
       {/* Header */}
       <div className="mb-8 text-center">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-2">
+        <h1 className="text-4xl font-bold bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-2">
           CI/CD Pipeline Visualization
         </h1>
         <p className="text-gray-400 text-lg">
