@@ -27,7 +27,7 @@ export const NODES = {
     // CI Pipeline (Top Row - Left to Right)
     sourceBox: { 
         x: 55, y: 90, width: 210, height: 140, 
-        label: 'Source Code', type: 'box', color:'#24292e',
+        label: 'Source Code', type: 'box', color:'#d97706',
         image: 'folder'
     },
     github: { 
@@ -37,49 +37,49 @@ export const NODES = {
     },
     action: { 
         x: 585, y: 90, width: 180, height: 140, 
-        label: 'GitHub Action', type: 'box', color: '#24292e',
+        label: 'GitHub Action', type: 'box', color: '#1e3a8a',
         image: 'githubActions',
         subtext: 'Build & Push'
     },
     dockerImage: { 
         x: 835, y: 90, width: 180, height: 140, 
-        label: 'Docker Image', type: 'box', color: '#24292e',
+        label: 'Docker Image', type: 'box', color: '#0073ec',
         image: 'docker'
     },
     registry: { 
         x: 1085, y: 90, width: 210, height: 140, 
-        label: 'ECR / Docker Hub', type: 'box', color: '#24292e',
+        label: 'ECR / Docker Hub', type: 'box', color: '#7c3aed',
         images: ['aws', 'dockerHub']
     },
     
     // CD Pipeline (Bottom Row - Left to Right)
     webhook: { 
         x: 55, y: 470, width: 210, height: 140, 
-        label: 'Webhook Event', type: 'box', color: '#1e3a8a',
+        label: 'Webhook Event', type: 'box', color: '#db2777',
         image: 'webhook',
         subtext: 'Detect Change'
     },
     githubActions2: { 
         x: 335, y: 470, width: 180, height: 140, 
-        label: 'GitHub Actions', type: 'box', color: '#24292e',
+        label: 'GitHub Actions', type: 'box', color: '#1e3a8a',
         image: 'githubActions',
         subtext: 'Update Helm'
     },
     gitRepo: { 
         x: 585, y: 470, width: 180, height: 140, 
-        label: 'Git Repository', type: 'box', color: '#24292e',
+        label: 'Git Repository', type: 'box', color: '#be123c',
         image: 'git',
         subtext: 'UpdateValue.yml'
     },
     argocd: { 
         x: 835, y: 470, width: 180, height: 140, 
-        label: 'ArgoCD', type: 'box', color: '#e85d2d',
+        label: 'ArgoCD', type: 'box', color: '#000000ff',
         image: 'argocd',
         subtext: 'Sync & Deploy'
     },
     kubernetes: { 
         x: 1085, y: 470, width: 210, height: 140, 
-        label: 'Kubernetes', type: 'box', color: '#326ce5',
+        label: 'Kubernetes', type: 'box', color: '#36454F',
         image: 'kubernetes',
         subtext: 'Update Pods'
     }
