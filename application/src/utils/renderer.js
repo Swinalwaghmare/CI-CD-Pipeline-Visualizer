@@ -24,11 +24,11 @@ export function drawNode(ctx, node, images) {
 
   ctx.fillStyle = node.color || "#2d3748";
   ctx.strokeStyle = "#4a5568";
-  ctx.lineWidth = 3;
+  ctx.lineWidth = 5;
   ctx.lineJoin = "round";
 
   ctx.beginPath();
-  ctx.roundRect(node.x, node.y, node.width, node.height, 12);
+  ctx.roundRect(node.x, node.y, node.width, node.height, 16);
   ctx.fill();
   ctx.stroke();
 
@@ -60,21 +60,34 @@ export function drawNode(ctx, node, images) {
     }
   }
 
-  ctx.fillStyle = "#ffffff";
-  ctx.font = "bold 14px Arial";
+  // Main Label Styling
+  ctx.fillStyle = "#f3f4f6"; // Slightly brighter white (Gray-100)
+  ctx.font = "600 16px 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
+  
+  // Add text shadow for better contrast
+  ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+  ctx.shadowBlur = 4;
+  ctx.shadowOffsetX = 0;
+  ctx.shadowOffsetY = 1;
 
   const lines = node.label.split("\n");
   const labelY = node.y + node.height - 35;
 
   lines.forEach((line, i) => {
-    ctx.fillText(line, node.x + node.width / 2, labelY + i * 18);
+    ctx.fillText(line, node.x + node.width / 2, labelY + i * 20);
   });
+  
+  // Reset shadow for subsequent draws
+  ctx.shadowColor = "transparent";
+  ctx.shadowBlur = 0;
+  ctx.shadowOffsetX = 0;
+  ctx.shadowOffsetY = 0;
 
   if (node.subtext) {
-    ctx.fillStyle = "#9ca3af";
-    ctx.font = "11px Arial";
+    ctx.fillStyle = "#9ca3af"; // Gray-400
+    ctx.font = "400 12px 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
     ctx.fillText(
       node.subtext,
       node.x + node.width / 2,
