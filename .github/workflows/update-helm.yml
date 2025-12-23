@@ -38,6 +38,6 @@ jobs:
     #       exit 0
     #     fi
     
-    #     git add helm/cicd-pipeline-viz/values.yaml
+    #     git add helm/cicd-pipeline/values.yaml
     #     git commit -m "chore(gitops): update image tag to ${TAG}"
     #     git push
