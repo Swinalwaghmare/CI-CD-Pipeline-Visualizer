@@ -3,11 +3,11 @@
 /* Custom dark theme styles */
 body {
   background: linear-gradient(135deg, #111827 0%, #1e293b 50%, #111827 100%);
-  min-height: 100vh;
+  min-height: 70vh;
   color: white;
 }
 
-/* Custom scrollbar for dark theme */
+/* Custom scrollbar for dark theme
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -23,4 +23,4 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #4b5563;
-}
+} */
