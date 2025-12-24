@@ -41,7 +41,7 @@ function App() {
       {/* Header - flexible height but resist shrinking too much */}
       <div className="text-center shrink-0 mb-2 md:mb-6">
         <h1 className="text-2xl md:text-4xl font-bold bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-1 md:mb-2">
-          CI/CD Pipeline Visualization
+          CI/CD Pipeline Visualization V2 
         </h1>
         <p className="text-gray-400 text-xs md:text-lg hidden sm:block">
           Complete GitOps Workflow with ArgoCD & Kubernetes
